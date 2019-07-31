@@ -8,12 +8,17 @@
 
     <link rel="stylesheet" href="css/index.css" />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
   </head>
 
-  <body>
+  <body class="container">
     <header>
       <nav>
         <a href="#">Home</a>
@@ -23,13 +28,13 @@
       </nav>
     </header>
 
-    <section>
+    <section id="intro">
       <img
-        src="img/char.jpg"
+        src="img/char.png"
         alt="Portrait of Char Aznable during the One Year War"
       />
       <h1>Char Aznable - Mobile Suit Commander</h1>
-      <p>Revenge is my jam!</p>
+      <p id="subtitle">Revenge is my jam!</p>
 
       <hr />
 
@@ -97,6 +102,27 @@
           <td>Supreme Leader of Neo Zeon</td>
         </tr>
       </table>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message"></textarea>
+        </div>
+        <button type="button">Send Message</button>
+      </form>
     </section>
 
     <footer>

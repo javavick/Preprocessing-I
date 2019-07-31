@@ -134,3 +134,75 @@ html,
 body {
   height: 100%;
 }
+/******************** MY CODE ********************/
+/*=============== VARIABLES ===============*/
+/*=============== MIXINS ===============*/
+/*=============== GENERAL ===============*/
+html {
+  font-size: 62.5%;
+}
+.container {
+  width: 87%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  /*=============== HEADER ===============*/
+  /*=============== INTRO ===============*/
+}
+.container header {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0;
+}
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+}
+.container header nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 1.7rem;
+}
+.container #intro {
+  background-color: #e4e4e4;
+  padding: 60px 30px;
+}
+.container #intro img {
+  width: 350px;
+}
+@media (max-width: 500px) {
+  .container #intro img {
+    width: 100%;
+  }
+}
+.container #intro h1 {
+  font-size: 6rem;
+  margin: 10px 0;
+}
+.container #intro #subtitle {
+  font-size: 2.2rem;
+}
+.container #intro hr {
+  margin: 30px 0;
+  background-color: darkgray;
+  border: none;
+  height: 1px;
+}
+.container #intro p {
+  font-size: 1.8rem;
+}
+.container #intro button {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container #intro button:hover {
+  background-color: #222222;
+}

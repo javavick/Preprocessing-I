@@ -138,3 +138,111 @@ html,
 body {
   height: 100%;
 }
+
+/******************** MY CODE ********************/
+
+/*=============== VARIABLES ===============*/
+
+@navFont: "Lato", sans-serif;
+
+@introColor: #e4e4e4;
+
+@darkestGray: #222222;
+
+/*=============== MIXINS ===============*/
+
+.displayFlex() {
+  display: flex;
+}
+
+.justifyBetween() {
+  justify-content: space-between;
+}
+
+.justifyEnd() {
+  justify-content: flex-end;
+}
+
+/*=============== GENERAL ===============*/
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-family: @navFont;
+
+  /*=============== HEADER ===============*/
+
+  header {
+    .displayFlex();
+    .justifyEnd();
+    margin: 30px 0;
+
+    nav {
+      .displayFlex();
+      .justifyBetween();
+      width: 320px;
+
+      a {
+        text-decoration: none;
+        color: @darkestGray;
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  /*=============== INTRO ===============*/
+
+  #intro {
+    background-color: @introColor;
+    padding: 60px 30px;
+
+    img {
+      width: 350px;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      font-size: 6rem;
+      margin: 10px 0;
+    }
+
+    #subtitle {
+      font-size: 2.2rem;
+    }
+
+    hr {
+      margin: 30px 0;
+      background-color: darkgray;
+      border: none;
+      height: 1px;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
+
+    button {
+      background-color: gray;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      padding: 15px;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background-color: @darkestGray;
+      }
+    }
+  }
+}
