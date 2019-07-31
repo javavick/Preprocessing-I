@@ -161,12 +161,12 @@ body {
   justify-content: space-between;
 }
 
-.justifyEnd() {
-  justify-content: flex-end;
-}
-
 .mainFontSize() {
   font-size: 1.7rem;
+}
+
+.headerFontSize {
+  font-size: 2.8rem;
 }
 
 .marginTD30() {
@@ -175,6 +175,20 @@ body {
 
 .marginT15() {
   margin-top: 15px;
+}
+
+.buttonStyle() {
+  background-color: gray;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @darkestGray;
+  }
 }
 
 /*=============== GENERAL ===============*/
@@ -193,8 +207,8 @@ html {
 
   header {
     .displayFlex();
-    .justifyEnd();
     .marginTD30();
+    justify-content: flex-end;
 
     nav {
       .displayFlex();
@@ -244,19 +258,9 @@ html {
     }
 
     button {
-      background-color: gray;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      .marginT15();
-      padding: 15px;
+      .buttonStyle();
+      margin-top: 30px;
       font-size: 2rem;
-      font-weight: bold;
-      cursor: pointer;
-
-      &:hover {
-        background-color: @darkestGray;
-      }
     }
   }
 
@@ -285,7 +289,7 @@ html {
       }
 
       #stuff-header {
-        font-size: 2.8rem;
+        .headerFontSize();
       }
 
       table,
@@ -306,7 +310,7 @@ html {
     .mainFontSize();
 
     h2 {
-      font-size: 2.8rem;
+      .headerFontSize();
     }
 
     table {
@@ -333,6 +337,47 @@ html {
 
     .oddRow {
       background-color: @introColor;
+    }
+  }
+
+  /*=============== CONTACT ===============*/
+
+  #contact {
+    .marginTD30();
+    padding-top: 30px;
+
+    h2 {
+      margin-bottom: 15px;
+      .headerFontSize();
+    }
+
+    form {
+    }
+
+    div {
+      .displayFlex();
+      flex-direction: column;
+
+      label {
+        .marginT15();
+        font-size: 1.8rem;
+      }
+
+      input,
+      textarea {
+        margin-top: 10px;
+        padding: 5px 0;
+      }
+    }
+
+    #first-input-div {
+      margin-top: 30px;
+    }
+
+    button {
+      .buttonStyle();
+      margin-top: 25px;
+      font-size: 1.8rem;
     }
   }
 }
