@@ -154,6 +154,7 @@ html {
   /*=============== LISTEN UP & SKILLS ===============*/
   /*=============== WORK HISTORY ===============*/
   /*=============== CONTACT ===============*/
+  /*=============== FOOTER ===============*/
 }
 .container header {
   display: flex;
@@ -306,4 +307,14 @@ html {
 }
 .container #contact button:hover {
   background-color: #222222;
+}
+.container footer {
+  font-size: 1.7rem;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  text-align: center;
 }
