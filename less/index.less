@@ -149,6 +149,8 @@ body {
 
 @darkestGray: #222222;
 
+@borderGray: 1px solid darkgray;
+
 /*=============== MIXINS ===============*/
 
 .displayFlex() {
@@ -163,16 +165,16 @@ body {
   justify-content: flex-end;
 }
 
-.tableBorder() {
-  border: 1px solid darkgray;
-}
-
 .mainFontSize() {
   font-size: 1.7rem;
 }
 
 .marginTD30() {
   margin: 30px 0;
+}
+
+.marginT15() {
+  margin-top: 15px;
 }
 
 /*=============== GENERAL ===============*/
@@ -246,7 +248,7 @@ html {
       color: white;
       border: none;
       border-radius: 5px;
-      margin-top: 15px;
+      .marginT15();
       padding: 15px;
       font-size: 2rem;
       font-weight: bold;
@@ -258,9 +260,9 @@ html {
     }
   }
 
-  /*=============== MIDDLE ===============*/
+  /*=============== LISTEN UP & SKILLS ===============*/
 
-  #middle {
+  #listen {
     .displayFlex();
     .justifyBetween();
     .mainFontSize();
@@ -275,7 +277,7 @@ html {
 
       p,
       table {
-        margin-top: 15px;
+        .marginT15();
       }
 
       p {
@@ -288,13 +290,49 @@ html {
 
       table,
       td {
-        .tableBorder();
+        border: @borderGray;
         width: 100%;
       }
 
       td {
         padding: 20px;
       }
+    }
+  }
+
+  /*=============== WORK HISTORY ===============*/
+
+  #history {
+    .mainFontSize();
+
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    table {
+      border-top: @borderGray;
+      border-bottom: @borderGray;
+      .marginT15();
+      width: 100%;
+      text-align: center;
+    }
+
+    tr {
+      border-top: @borderGray;
+      border-bottom: @borderGray;
+    }
+
+    td,
+    th {
+      padding: 20px 0;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    .oddRow {
+      background-color: @introColor;
     }
   }
 }
