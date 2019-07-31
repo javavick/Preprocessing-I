@@ -163,6 +163,18 @@ body {
   justify-content: flex-end;
 }
 
+.tableBorder() {
+  border: 1px solid darkgray;
+}
+
+.mainFontSize() {
+  font-size: 1.7rem;
+}
+
+.marginTD30() {
+  margin: 30px 0;
+}
+
 /*=============== GENERAL ===============*/
 
 html {
@@ -180,7 +192,7 @@ html {
   header {
     .displayFlex();
     .justifyEnd();
-    margin: 30px 0;
+    .marginTD30();
 
     nav {
       .displayFlex();
@@ -219,14 +231,14 @@ html {
     }
 
     hr {
-      margin: 30px 0;
+      .marginTD30();
       background-color: darkgray;
       border: none;
       height: 1px;
     }
 
     p {
-      font-size: 1.8rem;
+      .mainFontSize();
     }
 
     button {
@@ -242,6 +254,46 @@ html {
 
       &:hover {
         background-color: @darkestGray;
+      }
+    }
+  }
+
+  /*=============== MIDDLE ===============*/
+
+  #middle {
+    .displayFlex();
+    .justifyBetween();
+    .mainFontSize();
+
+    div {
+      width: 49%;
+      .marginTD30();
+
+      h2 {
+        font-size: 3.5rem;
+      }
+
+      p,
+      table {
+        margin-top: 15px;
+      }
+
+      p {
+        line-height: 2.4rem;
+      }
+
+      #stuff-header {
+        font-size: 2.8rem;
+      }
+
+      table,
+      td {
+        .tableBorder();
+        width: 100%;
+      }
+
+      td {
+        padding: 20px;
       }
     }
   }
