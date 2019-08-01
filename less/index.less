@@ -177,6 +177,10 @@ body {
   margin-top: 15px;
 }
 
+.marginT30() {
+  margin-top: 30px;
+}
+
 .buttonStyle() {
   background-color: gray;
   color: white;
@@ -203,6 +207,11 @@ html {
   font-size: 1.6rem;
   font-family: @navFont;
 
+  @media (max-width: 500px) {
+    width: 95%;
+    text-align: center;
+  }
+
   /*=============== HEADER ===============*/
 
   header {
@@ -210,10 +219,18 @@ html {
     .marginTD30();
     justify-content: flex-end;
 
+    @media (max-width: 500px) {
+      justify-content: center;
+    }
+
     nav {
       .displayFlex();
       .justifyBetween();
       width: 320px;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
 
       a {
         text-decoration: none;
@@ -259,7 +276,7 @@ html {
 
     button {
       .buttonStyle();
-      margin-top: 30px;
+      .marginT30;
       font-size: 2rem;
     }
   }
@@ -271,9 +288,18 @@ html {
     .justifyBetween();
     .mainFontSize();
 
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     div {
       width: 49%;
       .marginTD30();
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
 
       h2 {
         font-size: 3.5rem;
@@ -308,6 +334,10 @@ html {
 
   #history {
     .mainFontSize();
+
+    @media (max-width: 500px) {
+      .marginT30();
+    }
 
     h2 {
       .headerFontSize();
@@ -368,7 +398,7 @@ html {
     }
 
     #first-input-div {
-      margin-top: 30px;
+      .marginT30();
     }
 
     button {
