@@ -4,56 +4,420 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+/******************** MY CODE ********************/
+
+/*=============== VARIABLES ===============*/
+
+@navFont: "Lato", sans-serif;
+
+@introColor: #e4e4e4;
+
+@darkestGray: #222222;
+
+@borderGray: 1px solid darkgray;
+
+/*=============== MIXINS ===============*/
+
+.displayFlex() {
+  display: flex;
+}
+
+.justifyBetween() {
+  justify-content: space-between;
+}
+
+.mainFontSize() {
+  font-size: 1.7rem;
+}
+
+.headerFontSize {
+  font-size: 2.8rem;
+}
+
+.marginTD30() {
+  margin: 30px 0;
+}
+
+.marginT15() {
+  margin-top: 15px;
+}
+
+.marginT30() {
+  margin-top: 30px;
+}
+
+.buttonStyle() {
+  background-color: gray;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @darkestGray;
+  }
+}
+
+/*=============== GENERAL ===============*/
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-family: @navFont;
+
+  @media (max-width: 500px) {
+    width: 95%;
+    text-align: center;
+  }
+
+  /*=============== HEADER ===============*/
+
+  header {
+    .displayFlex();
+    .marginTD30();
+    justify-content: flex-end;
+
+    @media (max-width: 500px) {
+      justify-content: center;
+    }
+
+    nav {
+      .displayFlex();
+      .justifyBetween();
+      width: 320px;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        color: @darkestGray;
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  /*=============== INTRO ===============*/
+
+  #intro {
+    background-color: @introColor;
+    padding: 60px 30px;
+
+    img {
+      width: 350px;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      font-size: 6rem;
+      margin: 10px 0;
+    }
+
+    #subtitle {
+      font-size: 2.2rem;
+    }
+
+    hr {
+      .marginTD30();
+      background-color: darkgray;
+      border: none;
+      height: 1px;
+    }
+
+    p {
+      .mainFontSize();
+    }
+
+    button {
+      .buttonStyle();
+      .marginT30;
+      font-size: 2rem;
+    }
+  }
+
+  /*=============== LISTEN UP & SKILLS ===============*/
+
+  #listen {
+    .displayFlex();
+    .justifyBetween();
+    .mainFontSize();
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    div {
+      width: 49%;
+      .marginTD30();
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+      }
+
+      p,
+      table {
+        .marginT15();
+      }
+
+      p {
+        line-height: 2.4rem;
+      }
+
+      #stuff-header {
+        .headerFontSize();
+      }
+
+      table,
+      td {
+        border: @borderGray;
+        width: 100%;
+      }
+
+      td {
+        padding: 20px;
+      }
+    }
+  }
+
+  /*=============== WORK HISTORY ===============*/
+
+  #history {
+    .mainFontSize();
+
+    @media (max-width: 500px) {
+      .marginT30();
+    }
+
+    h2 {
+      .headerFontSize();
+    }
+
+    table {
+      border-top: @borderGray;
+      border-bottom: @borderGray;
+      .marginT15();
+      width: 100%;
+      text-align: center;
+    }
+
+    tr {
+      border-top: @borderGray;
+      border-bottom: @borderGray;
+    }
+
+    td,
+    th {
+      padding: 20px 0;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    .oddRow {
+      background-color: @introColor;
+    }
+  }
+
+  /*=============== CONTACT ===============*/
+
+  #contact {
+    .marginTD30();
+    padding-top: 30px;
+
+    h2 {
+      margin-bottom: 15px;
+      .headerFontSize();
+    }
+
+    div {
+      .displayFlex();
+      flex-direction: column;
+
+      label {
+        .marginT15();
+        font-size: 1.8rem;
+      }
+
+      input,
+      textarea {
+        margin-top: 10px;
+        padding: 5px 0;
+      }
+    }
+
+    #first-input-div {
+      .marginT30();
+    }
+
+    button {
+      .buttonStyle();
+      margin-top: 25px;
+      font-size: 1.8rem;
+    }
+  }
+
+  /*=============== FOOTER ===============*/
+
+  footer {
+    font-size: 1.7rem;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+}

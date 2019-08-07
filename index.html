@@ -1,19 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>Char Aznable - Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <h1>My Resume</h1>
-</body>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="container">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#listen">About</a>
+        <a href="#history">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="intro">
+      <img
+        src="img/char.png"
+        alt="Portrait of Char Aznable during the One Year War"
+      />
+      <h1>Char Aznable - Mobile Suit Commander</h1>
+      <p id="subtitle">Revenge is my jam!</p>
+
+      <hr />
+
+      <p>
+        Occasionally I have time to work on killing people on the side, if
+        you're interested in having me brutally murder someone for you, let me
+        know by signing up on this website.
+      </p>
+      <button type="button">Assassination Form</button>
+    </section>
+
+    <section id="listen">
+      <div>
+        <h2>Listen Up...</h2>
+        <p>
+          As a mobile suit pilot, Char excels in land, air, and space combat. He
+          will exploit the disadvantages of his foe and use it to his advantage.
+          Char is also able to bring out the full potential of a mobile suit,
+          and is able to hold his ground against the technologically superior
+          RX-78-2 Gundam with commander versions of the Zaku, Z'Gok, and
+          Gelgoog. His days at the Zeon Space Defense Military Academy helped
+          him hone his combat skills as a foot soldier, such as using firearms,
+          detonating explosives, and fencing. His bold leadershi, which he is
+          well known for, was also developed at the military academy. Char's
+          Newtype abilities developed as a result of long term training. Char is
+          also a cunning strategist and tactician, managing to outsmart many of
+          his enemies, even when he is not piloting a mobile suit. Char, like
+          his father, seems to be a natural born orator.
+        </p>
+      </div>
+
+      <div>
+        <h2 id="stuff-header">Stuff I'm Good At:</h2>
+        <table>
+          <tr>
+            <td>Murder</td>
+          </tr>
+
+          <tr>
+            <td>Wearing Red</td>
+          </tr>
+
+          <tr>
+            <td>Killing</td>
+          </tr>
+
+          <tr>
+            <td>Going Really Fast</td>
+          </tr>
+
+          <tr>
+            <td>Homicide</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="history">
+      <h2>Work History</h2>
+      <table>
+        <tr>
+          <th>Yrs</th>
+          <th>Company</th>
+          <th>Title</th>
+        </tr>
+
+        <tr class="oddRow">
+          <td>5</td>
+          <td>Principality of Zeon</td>
+          <td>Mobile Suit Commander</td>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>A.E.U.G.</td>
+          <td>A.E.U.G. Public Representative and Leader</td>
+        </tr>
+
+        <tr class="oddRow">
+          <td>2</td>
+          <td>Neo Zeon</td>
+          <td>Supreme Leader of Neo Zeon</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <hr />
+      <form>
+        <div id="first-input-div">
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" rows="6"></textarea>
+        </div>
+        <button type="button">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© Char Aznable</p>
+    </footer>
+  </body>
 </html>
